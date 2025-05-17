@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">LocalFresh</string>
+    <string name="google_sign_in">Google iniciar sesion</string>
+    <string name="default_web_client_id">773833726320-5n66j19c8c9e5i8cn9fastaut6u6ir86.apps.googleusercontent.com</string>
+    <string name="categoria">categoria</string>
+
+    <string-array name="fecha_caducidad_options">
+        <item>Más cercana</item>
+        <item>Más lejana</item>
+    </string-array>
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+
+    <!--Formatitos-->
+  <string name="price_format">%.2f$</string>
+  <string name="days_format">%d días</string>}
+    <string name="time_limit_format">Tiempo restante para el carrito antes de que expire\n%d minutos</string>
+    <string name="no_active_cart">No tienes un carrito activo</string>
+    <string name="cart_total_format">Total: $%.2f</string>
+
+    <!--Apartados-->
+    <string name="no_reservations_available">No hay apartados disponibles</string>
+
+    <!-- Perfil -->
+    <string name="edit_profile">Editar Perfil</string>
+    <string name="save_changes">Guardar cambios</string>
+    <string name="account_information">Información de la Cuenta</string>
+
+    <!-- Barra de busqueda -->
+    <string name="search_hint">Buscar productos</string>
+</resources>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/GoogleSignUp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="0dp"
+        android:gravity="center">
+
+        <!-- Título -->
+        <TextView
+            android:id="@+id/register_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Complete su Perfil"
+            android:textSize="24sp"
+            android:textColor="#14AE5C"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
+            android:fontFamily="sans-serif-medium" />
+
+        <!-- Campo Nombre -->
+        <EditText
+            android:id="@+id/first_name_input"
+            android:layout_width="348dp"
+            android:layout_height="56dp"
+            android:hint="Nombre"
+            android:inputType="textPersonName"
+            android:drawableStart="@drawable/ic_user"
+            android:drawableTint="@color/text_color"
+            android:padding="12dp"
+            android:background="@drawable/rounded_edittext"
+            android:textColor="@color/text_color"
+            android:textStyle="bold"
+            android:layout_marginTop="12dp"
+            android:textColorHint="@color/hint_color"/>
+
+        <!-- Campo Apellidos -->
+        <EditText
+            android:id="@+id/last_name_input"
+            android:layout_width="348dp"
+            android:layout_height="56dp"
+            android:hint="Apellidos (opcional)"
+            android:inputType="textPersonName"
+            android:drawableStart="@drawable/ic_user"
+            android:drawableTint="@color/text_color"
+            android:padding="12dp"
+            android:background="@drawable/rounded_edittext"
+            android:textColor="@color/text_color"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp"
+            android:textColorHint="@color/hint_color"/>
+
+        <!-- Campo Nombre de Usuario -->
+        <EditText
+            android:id="@+id/username_input"
+            android:layout_width="348dp"
+            android:layout_height="56dp"
+            android:hint="Nombre usuario"
+            android:inputType="text"
+            android:drawableStart="@drawable/ic_user"
+            android:drawableTint="@color/text_color"
+            android:padding="12dp"
+            android:background="@drawable/rounded_edittext"
+            android:textColor="@color/text_color"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp"
+            android:textColorHint="@color/hint_color"/>
+
+        <!-- Campo Fecha de Nacimiento -->
+        <EditText
+            android:id="@+id/birthdate_input"
+            android:layout_width="348dp"
+            android:layout_height="56dp"
+            android:hint="DD/MM/AAAA"
+            android:inputType="date"
+            android:drawableStart="@drawable/ic_calendar"
+            android:drawableTint="@color/text_color"
+            android:padding="12dp"
+            android:background="@drawable/rounded_edittext"
+            android:textColor="@color/text_color"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp"
+            android:textColorHint="@color/hint_color"/>
+
+        <!-- Campo Teléfono -->
+        <EditText
+            android:id="@+id/phone_input"
+            android:layout_width="348dp"
+            android:layout_height="56dp"
+            android:hint="+52 | XX XXXX XXXX"
+            android:inputType="phone"
+            android:drawableStart="@drawable/ic_phone"
+            android:drawableTint="@color/text_color"
+            android:padding="12dp"
+            android:background="@drawable/rounded_edittext"
+            android:textColor="@color/text_color"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp"
+            android:textColorHint="@color/hint_color"/>
+
+        <!-- Botón de crear cuenta -->
+        <Button
+            android:id="@+id/create_account_button"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#14AE5C"
+            android:text="Guardar Perfil"
+            android:textColor="#FFFFFF" />
+
+        <!-- Texto de términos y condiciones -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Al crear una cuenta estás de acuerdo con los"
+            android:textColor="#6C7278"
+            android:layout_marginTop="16dp"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:id="@+id/terms_and_conditions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Términos y Condiciones de la aplicación"
+            android:textColor="@color/text_color"
+            android:textStyle="bold"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+</ScrollView>

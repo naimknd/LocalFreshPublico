@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background_color">#FF121212</color>
+    <color name="item_color">#FF121212</color>
+    <color name="card_color">#FF121212</color>
+    <color name="black">#FF121212</color> <!-- Negro más suave -->
+    <color name="white">#FFFFFFFF</color> <!-- Blanco para texto o elementos destacados -->
+    <color name="red">#FF5252</color> <!-- El rojo puede permanecer igual -->
+    <color name="warning_color">#FFA500</color>
+    <color name="hint_color">#BDBDBD</color> <!-- Un gris claro para hints -->
+    <color name="text_color">#E0E0E0</color> <!-- Gris claro para texto principal -->
+    <color name="green">#14AE5C</color> <!-- Verde oscuro más vibrante -->
+    <color name="gray_chip_background">#37474F</color> <!-- Gris oscuro para fondos de chips -->
+    <color name="green_chip_selected">#14AE5C</color> <!-- Verde más oscuro para selección -->
+    <color name="green_light">#388E3C</color> <!-- Verde más oscuro para fondos claros -->
+    <color name="medium_gray">#90A4AE</color> <!-- Gris más claro para fondos o separadores -->
+    <color name="navbar">#FF121212</color>
+    <!-- Para el edit text -->
+    <color name="edit_text_background">#FF121212</color> <!-- Gris oscuro para tema oscuro -->
+    <color name="edit_text_border">#555555</color> <!-- Gris más claro para el borde en tema oscuro -->
+    <color name="circle_fill_color">#4D004422</color> <!-- Green fill color -->
+    <color name="circle_stroke_color">#010F07</color> <!-- Dark green stroke color -->
+
+    <color name="divider_color">#DDDDDD</color> <!-- Gris claro para los separadores -->
+
+    <!-- Colores BottomSheet -->
+    <color name="chip_selected">#14AE5C</color> <!-- Verde seleccionado -->
+    <color name="chip_unselected">#767676</color> <!-- Gris para chips no seleccionados -->
+    <color name="chip_text_color">#010F07</color> <!-- Color del texto dentro del chip -->
+    <color name="apply_button">#14AE5C</color> <!-- Morado para el botón Aplicar -->
+    <color name="reset_button">#FF5252</color> <!-- Rojo para el botón de Rest All -->
+    <color name="background_bottom_sheet">#37474F</color> <!-- Fondo del BottomSheet -->
+
+    <color name="cardBackgroundColor">@color/background_color</color> <!-- Color de fondo de la tarjeta -->
+
+    <color name="green_transparent">#4D14AE5C</color> <!-- Verde transparente -->
+
+    <!-- Colores para los estados de las notificaciones -->
+    <color name="light_success_bg">#1B5E20</color>
+    <color name="light_warning_bg">#33301A</color>
+    <color name="light_error_bg">#3D2323</color>
+</resources>

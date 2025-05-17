@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="32dp">
+
+        <!-- Icono de correo enviado -->
+        <ImageView
+            android:id="@+id/email_sent_icon"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/ic_email"
+            android:layout_gravity="center"
+            android:contentDescription="Correo enviado"
+            android:layout_marginBottom="24dp"
+            app:tint="@color/green" />
+
+        <!-- Título -->
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¡Verifica tu correo!"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/green"
+            android:layout_gravity="center"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Mensaje de instrucciones -->
+        <TextView
+            android:id="@+id/instructions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Te hemos enviado un correo de verificación. Por favor revisa tu bandeja de entrada y sigue las instrucciones para activar tu cuenta de vendedor."
+            android:textSize="16sp"
+            android:textColor="@color/text_color"
+            android:gravity="center"
+            android:layout_marginBottom="24dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"/>
+
+        <!-- ProgressBar -->
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_gravity="center"
+            style="@style/Widget.AppCompat.ProgressBar"/>
+
+        <!-- Botón para reenviar correo -->
+        <Button
+            android:id="@+id/resend_verification_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Reenviar correo de verificación"
+            android:backgroundTint="@color/green"
+            android:textColor="@color/white"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Botón para continuar al login -->
+        <Button
+            android:id="@+id/continue_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Continuar a inicio de sesión"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:textColor="@color/green"
+            android:layout_marginTop="8dp"/>
+
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

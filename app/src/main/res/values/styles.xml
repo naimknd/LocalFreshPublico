@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <resources>
+        <style name="CardViewStyle">
+            <item name="cardCornerRadius">8dp</item>
+            <item name="cardElevation">4dp</item>
+            <item name="android:background">@android:color/transparent</item>
+        </style>
+
+    <style name="CustomAlertDialog" parent="ThemeOverlay.MaterialComponents.MaterialAlertDialog">
+        <item name="materialAlertDialogBodyTextStyle">@style/BodyTextStyle</item>
+        <item name="materialAlertDialogTitleTextStyle">@style/TitleTextStyle</item>
+        <item name="colorSurface">@color/background_color</item>
+        <item name="buttonBarPositiveButtonStyle">@style/PositiveButtonStyle</item>
+        <item name="buttonBarNegativeButtonStyle">@style/NegativeButtonStyle</item>
+    </style>
+
+    <style name="TitleTextStyle" parent="MaterialAlertDialog.MaterialComponents.Title.Text">
+        <item name="android:textColor">@color/green</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="BodyTextStyle" parent="MaterialAlertDialog.MaterialComponents.Body.Text">
+        <item name="android:textColor">@color/text_color</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="PositiveButtonStyle" parent="Widget.MaterialComponents.Button">
+        <item name="android:textColor">@color/white</item>
+        <item name="backgroundTint">@color/green</item>
+    </style>
+
+    <style name="NegativeButtonStyle" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="android:textColor">@color/text_color</item>
+    </style>
+
+    <style name="QuantityPickerTheme">
+        <item name="android:textColorPrimary">@color/text_color</item>
+        <item name="android:colorControlNormal">@color/green</item>
+    </style>
+
+    <style name="SearchViewStyle" parent="Widget.AppCompat.SearchView">
+        <item name="android:textColorHint">@color/hint_color</item>
+        <item name="android:textColor">@color/text_color</item>
+        <item name="android:tint">@color/text_color</item>
+        <item name="queryBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="GreenRatingBar" parent="Widget.AppCompat.RatingBar">
+        <item name="colorControlNormal">@android:color/darker_gray</item>
+        <item name="colorControlActivated">@color/green</item>
+    </style>
+
+    <style name="GreenRatingBarSmall" parent="Widget.AppCompat.RatingBar.Small">
+        <item name="colorControlNormal">@android:color/darker_gray</item>
+        <item name="colorControlActivated">@color/green</item>
+    </style>
+
+    <style name="CustomChipStyle" parent="Widget.MaterialComponents.Chip.Choice">
+        <item name="chipBackgroundColor">@color/chip_background_selector</item>
+        <item name="chipStrokeColor">@color/green</item>
+        <item name="chipStrokeWidth">1dp</item>
+        <item name="chipIconTint">@color/chip_icon_selector</item>
+        <item name="android:textColor">@color/chip_text_selector</item>
+        <item name="chipStartPadding">8dp</item>
+        <item name="chipEndPadding">8dp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:elevation">2dp</item>
+        <item name="rippleColor">@color/green_transparent</item>
+    </style>
+
+    </resources>

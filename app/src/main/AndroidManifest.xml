@@ -1,0 +1,122 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Permisos -->
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <!-- Permisos para la ubicación -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <!-- Permisos para la red -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- Permisos para el almacenamiento -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!-- Permisos para la galería -->
+    <uses-permission android:name="android.permission.ACCESS_MEDIA_LOCATION"/>
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28"/>
+    <!-- Permisos de la cámara -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera" android:required="false" />
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false" />
+    <application
+        android:name=".LocalFreshApplication"
+        android:usesCleartextTraffic="true"
+        android:enableOnBackInvokedCallback="true"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.LocalFresh"
+        android:value="@integer/google_play_services_version"
+        tools:targetApi="31">
+
+        <!-- Configuración de Firebase  -->
+        <service
+            android:name=".services.LocalFreshMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <!-- Configuración de la versión de Google Play Services -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <!-- Configuración de caché para OpenStreetMap -->
+        <meta-data
+            android:name="org.osmdroid.config"
+            android:value="true" />
+
+        <!-- Splash Screen -->
+        <activity
+            android:name=".activitys.SplashScreenActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Actividad LogIn -->
+        <activity
+            android:name=".activitys.LogInActivity"
+            android:exported="true" />
+        <activity android:name=".activitys.ForgotPasswordActivity"/>
+
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+
+        <!-- Registro Compradores -->
+        <activity android:name=".activitys.comprador.registro.SignUpCompradorActivity"/>
+        <activity android:name=".activitys.comprador.registro.ConfirmarCorreoCompradorActivity"/>
+        <activity android:name=".activitys.comprador.registro.CompletarPerfilCompradorActivity"/>
+
+        <!-- Pagina Principal Compradores -->
+        <activity
+            android:name=".activitys.comprador.paginaprincipal.PaginaPrincipalCompradorActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data
+                    android:scheme="localfresh"
+                    android:host="apartado"
+                    android:pathPattern="/.*" />
+            </intent-filter>
+        </activity>
+
+        <!-- Registro Comerciantes -->
+        <activity android:name=".activitys.vendedor.registrovendedores.ConfirmarCorreoVendedorActivity"/>
+        <activity android:name=".activitys.vendedor.registrovendedores.SelectAddressStoreSignUp" />
+
+        <!-- Registro Vendedores -->
+        <activity android:name=".activitys.vendedor.registrovendedores.SignUpVendedoresActivity" />
+
+        <!-- Pagina Principal Vendedores -->
+        <activity android:name=".activitys.vendedor.paginaprincipal.PaginaPrincipalVendedorActivity" />
+
+        <activity
+            android:name=".test.TestWorkerActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

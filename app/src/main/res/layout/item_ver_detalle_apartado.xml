@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="8dp"
+    android:layout_marginVertical="4dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="2dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <!-- Imagen del producto -->
+        <ImageView
+            android:id="@+id/imgProducto"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:contentDescription="Imagen del producto"
+            android:scaleType="fitCenter"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/ic_placeholder" />
+
+        <!-- Nombre del producto -->
+        <TextView
+            android:id="@+id/tvNombreProducto"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/text_color"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/imgProducto"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Nombre del Producto" />
+
+        <!-- Categoría -->
+        <TextView
+            android:id="@+id/tvCategoria"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:textColor="@color/green"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@id/tvNombreProducto"
+            app:layout_constraintTop_toBottomOf="@id/tvNombreProducto"
+            tools:text="Categoría" />
+
+        <!-- Cantidad -->
+        <TextView
+            android:id="@+id/tvCantidad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/text_color"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@id/tvNombreProducto"
+            app:layout_constraintTop_toBottomOf="@id/tvCategoria"
+            tools:text="Cantidad: 2" />
+
+        <!-- Contenedor de precios -->
+        <LinearLayout
+            android:id="@+id/priceContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="4dp"
+            android:gravity="center_vertical"
+            app:layout_constraintStart_toStartOf="@id/tvNombreProducto"
+            app:layout_constraintTop_toBottomOf="@id/tvCantidad">
+
+            <!-- Precio original -->
+            <TextView
+                android:id="@+id/tvPrecioOriginal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:textColor="@color/text_color"
+                tools:text="$100.00" />
+
+            <!-- Precio con descuento -->
+            <TextView
+                android:id="@+id/tvPrecioDescuento"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:textColor="@color/green"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                tools:text="$80.00" />
+
+            <!-- Porcentaje de descuento -->
+            <TextView
+                android:id="@+id/tvDescuento"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:textColor="@color/white"
+                android:textSize="11sp"
+                android:paddingHorizontal="4dp"
+                android:paddingVertical="1dp"
+                android:background="@drawable/bg_discount_pill"
+                android:backgroundTint="@color/green"
+                tools:text="-20%" />
+        </LinearLayout>
+
+        <!-- Total destacado (NUEVO) -->
+        <TextView
+            android:id="@+id/tvItemTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:textColor="@color/green"
+            app:layout_constraintStart_toStartOf="@id/tvNombreProducto"
+            app:layout_constraintTop_toBottomOf="@id/priceContainer"
+            tools:text="Total: $160.00" />
+
+        <!-- Información de caducidad (separada en dos textos como en carrito) -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="4dp"
+            app:layout_constraintStart_toStartOf="@id/tvNombreProducto"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvItemTotal">
+
+            <!-- Fecha límite -->
+            <TextView
+                android:id="@+id/tvFechaLimite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_color"
+                android:textSize="11sp"
+                tools:text="Fecha límite: 31/12/23" />
+
+            <!-- Días restantes (NUEVO) -->
+            <TextView
+                android:id="@+id/tvDiasRestantes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:textSize="11sp"
+                android:textColor="@color/text_color"
+                tools:text="(3 días)" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

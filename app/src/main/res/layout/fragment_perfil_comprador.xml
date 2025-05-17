@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+    <ScrollView
+        android:id="@+id/contentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:clipToPadding="false"
+        android:visibility="visible"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/txtUsername"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:text="Username"
+                android:textSize="18sp"
+                android:textColor="@color/text_color"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Configuración"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/green"
+                android:textStyle="bold"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:background="@android:color/darker_gray" />
+
+            <!-- Información de la cuenta -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardAccountInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/card_color"
+                    android:drawableStart="@drawable/ic_user"
+                    android:drawableEnd="@drawable/ic_arrow_right"
+                    android:drawablePadding="16dp"
+                    android:drawableTint="@color/green"
+                    android:padding="16dp"
+                    android:text="Información de la cuenta"
+                    android:textColor="@color/text_color" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Configuración de preferencias -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardPreferences"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/card_color"
+                    android:drawableStart="@drawable/ic_settings"
+                    android:drawableEnd="@drawable/ic_arrow_right"
+                    android:drawablePadding="16dp"
+                    android:drawableTint="@color/green"
+                    android:padding="16dp"
+                    android:text="Configuración de preferencias"
+                    android:textColor="@color/text_color" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Historial de compras -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardPurchaseHistory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/card_color"
+                    android:drawableStart="@drawable/ic_history"
+                    android:drawableEnd="@drawable/ic_arrow_right"
+                    android:drawablePadding="16dp"
+                    android:drawableTint="@color/green"
+                    android:padding="16dp"
+                    android:text="Historial de compras"
+                    android:textColor="@color/text_color" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Cálculo de estadísticas -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardStats"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/card_color"
+                    android:drawableStart="@drawable/ic_stats"
+                    android:drawableEnd="@drawable/ic_arrow_right"
+                    android:drawablePadding="16dp"
+                    android:drawableTint="@color/green"
+                    android:padding="16dp"
+                    android:text="Cálculo de estadísticas"
+                    android:textColor="@color/text_color" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Tiendas y productos favoritos -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardFavorites"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/card_color"
+                    android:drawableStart="@drawable/ic_favorite"
+                    android:drawableEnd="@drawable/ic_arrow_right"
+                    android:drawablePadding="16dp"
+                    android:drawableTint="@color/green"
+                    android:padding="16dp"
+                    android:text="Tiendas y productos favoritos"
+                    android:textColor="@color/text_color" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Preferencias de notificación -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardNotifications"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/card_color"
+                    android:drawableStart="@drawable/ic_notifications"
+                    android:drawableEnd="@drawable/ic_arrow_right"
+                    android:drawablePadding="16dp"
+                    android:drawableTint="@color/green"
+                    android:padding="16dp"
+                    android:text="Preferencias de notificación"
+                    android:textColor="@color/text_color" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <Button
+                android:id="@+id/logoutButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:backgroundTint="@color/green"
+                android:padding="12dp"
+                android:text="Cerrar Sesión"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Loading indicator -->
+    <FrameLayout
+        android:id="@+id/loadingContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_gravity="center"
+            android:indeterminateTint="@color/green" />
+    </FrameLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

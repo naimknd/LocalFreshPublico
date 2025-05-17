@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/background_bottom_sheet"
+    android:backgroundTint="@color/background_color"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center_horizontal">
+
+    <!-- Título -->
+    <TextView
+        android:id="@+id/tvTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Selecciona Categorías"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/text_color"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:paddingBottom="8dp"/>
+
+    <!-- Categoría: Categorías de Productos -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Categorías"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@color/text_color"
+        android:paddingBottom="4dp"/>
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/chipGroupCategorias"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:singleSelection="false">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipLacteos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lácteos"
+            style="@style/CustomChipStyle"
+            app:chipIcon="@drawable/ic_dairy"
+            app:chipIconTint="@color/text_color"
+            app:chipIconVisible="true"/>
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipCarnes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Carnes"
+            style="@style/CustomChipStyle"
+            app:chipIcon="@drawable/ic_meat"
+            app:chipIconTint="@color/text_color"
+            app:chipIconVisible="true"/>
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipHuevos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Huevos"
+            style="@style/CustomChipStyle"
+            app:chipIcon="@drawable/ic_eggs"
+            app:chipIconTint="@color/text_color"
+            app:chipIconVisible="true"/>
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipGranos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Granos y cereales"
+            style="@style/CustomChipStyle"
+            app:chipIcon="@drawable/ic_cereal"
+            app:chipIconTint="@color/text_color"
+            app:chipIconVisible="true"/>
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipLegumbres"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Legumbres"
+            style="@style/CustomChipStyle"
+            app:chipIcon="@drawable/ic_legumes"
+            app:chipIconTint="@color/text_color"
+            app:chipIconVisible="true"/>
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipPanaderia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Panadería y repostería"
+            style="@style/CustomChipStyle"
+            app:chipIcon="@drawable/ic_bakery"
+            app:chipIconTint="@color/text_color"
+            app:chipIconVisible="true"/>
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipBebidas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bebidas"
+            style="@style/CustomChipStyle"
+            app:chipIcon="@drawable/ic_drinks"
+            app:chipIconTint="@color/text_color"
+            app:chipIconVisible="true"/>
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipSnacks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Snacks y botanas"
+            style="@style/CustomChipStyle"
+            app:chipIcon="@drawable/ic_snacks"
+            app:chipIconTint="@color/text_color"
+            app:chipIconVisible="true"/>
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipCongelados"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Congelados"
+            style="@style/CustomChipStyle"
+            app:chipIcon="@drawable/ic_frozen"
+            app:chipIconTint="@color/text_color"
+            app:chipIconVisible="true"/>
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipMascotas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Comida para mascotas"
+            style="@style/CustomChipStyle"
+            app:chipIcon="@drawable/ic_pets"
+            app:chipIconTint="@color/text_color"
+            app:chipIconVisible="true"/>
+    </com.google.android.material.chip.ChipGroup>
+
+    <!-- Botones -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="24dp"
+        android:gravity="center">
+
+        <!-- Botón Cancelar -->
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cancelar"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:textColor="@color/text_color"
+            android:padding="8dp"/>
+
+        <!-- Botón Restablecer -->
+        <Button
+            android:id="@+id/btnReset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Restablecer"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:textColor="@color/green"
+            android:layout_marginStart="8dp"
+            android:padding="8dp"/>
+
+        <!-- Botón Aplicar -->
+        <Button
+            android:id="@+id/btnApply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Aplicar"
+            style="@style/Widget.MaterialComponents.Button"
+            android:backgroundTint="@color/green"
+            android:textColor="@color/white"
+            android:layout_marginStart="8dp"
+            android:padding="8dp"/>
+    </LinearLayout>
+</LinearLayout>

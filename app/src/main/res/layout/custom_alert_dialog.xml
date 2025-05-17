@@ -1,0 +1,50 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    card_view:cardCornerRadius="16dp"
+    card_view:cardElevation="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/dialogTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Activar ubicación"
+            android:textAppearance="?attr/textAppearanceHeadline6"
+            android:paddingBottom="8dp"
+            android:textColor="@color/text_color" />
+
+        <TextView
+            android:id="@+id/dialogMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="La aplicación necesita que actives la ubicación para funcionar correctamente."
+            android:textAppearance="?attr/textAppearanceBody1"
+            android:paddingBottom="16dp"
+            android:textColor="@color/text_color" />
+
+        <Button
+            android:id="@+id/dialogPositiveButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Activar"
+            android:backgroundTint="@color/green"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/dialogNegativeButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cancelar"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="@color/red"
+            android:textColor="@color/white" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

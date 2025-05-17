@@ -1,0 +1,92 @@
+<androidx.cardview.widget.CardView android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="4dp"
+    app:cardBackgroundColor="@color/light_error_bg"
+    app:cardUseCompatPadding="true"
+    android:layout_marginTop="12dp"
+    android:layout_marginBottom="12dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/icWarning"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_warning"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/tvNombreProducto"
+            android:layout_marginEnd="8dp"
+            app:tint="@color/red" />
+
+        <TextView
+            android:id="@+id/tvNombreProducto"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Sabritas Adobadas"
+            android:textStyle="bold"
+            android:textColor="@color/red"
+            android:textSize="17sp"
+            app:layout_constraintStart_toEndOf="@id/icWarning"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btnEditar"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"/>
+
+        <TextView
+            android:id="@+id/tvCategoria"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Snacks y botanas"
+            android:textColor="@color/text_color"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@id/tvNombreProducto"
+            app:layout_constraintTop_toBottomOf="@id/tvNombreProducto"
+            app:layout_constraintEnd_toEndOf="@id/tvNombreProducto" />
+
+        <TextView
+            android:id="@+id/tvFechaCaducidad"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Consumo preferente hasta: 2025-04-25"
+            android:textColor="@color/red"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@id/tvCategoria"
+            app:layout_constraintTop_toBottomOf="@id/tvCategoria"
+            app:layout_constraintEnd_toEndOf="@id/tvCategoria" />
+
+        <TextView
+            android:id="@+id/tvCantidad"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Cantidad: 9"
+            android:textColor="@color/text_color"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@id/tvFechaCaducidad"
+            app:layout_constraintTop_toBottomOf="@id/tvFechaCaducidad"
+            app:layout_constraintEnd_toEndOf="@id/tvFechaCaducidad" />
+
+        <Button
+            android:id="@+id/btnEditar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ver unidades"
+            android:backgroundTint="@color/red"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            style="@style/Widget.MaterialComponents.Button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="4dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

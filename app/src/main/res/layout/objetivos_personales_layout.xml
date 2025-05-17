@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".activitys.Registro.ObjetivosPersonales">
+
+    <!-- Barra superior -->
+
+    <!-- Título principal -->
+    <TextView
+        android:id="@+id/tvTitulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="Objetivos personales"
+        android:textColor="#14AE5C"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <!-- Subtítulo -->
+    <TextView
+        android:id="@+id/tvSubtitulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Por favor selecciona tus objetivos personales"
+        android:textColor="@color/text_color"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:layout_marginBottom="16dp" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="20dp"
+        app:cardBackgroundColor="@color/green"
+        android:layout_marginBottom="16dp">
+
+        <!-- Botón de selección de objetivos -->
+        <Button
+            android:id="@+id/btnObjetivos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Objetivos personales"
+            android:drawableEnd="@drawable/down_arrow"
+            android:drawableTint="@color/white"
+            android:backgroundTint="@color/green"
+            android:padding="12dp"
+            android:textColor="@color/white"
+            android:stateListAnimator="@null"
+            android:layout_margin="4dp" />
+    </androidx.cardview.widget.CardView>
+
+    <!-- CardView para CheckBoxes -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewObjetivos"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="20dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="16dp">
+
+        <LinearLayout
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Título interno -->
+            <TextView
+                android:id="@+id/tvSelecciona"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Selecciona"
+                android:textColor="@color/text_color"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <!-- CheckBoxes -->
+            <CheckBox
+                android:id="@+id/chkAhorrarDinero"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:buttonTint="@color/checkbox_selector"
+                android:text="Ahorrar dinero"
+                android:textColor="@color/text_color"
+                android:textStyle="bold" />
+
+            <CheckBox
+                android:id="@+id/chkReducirDesperdicio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:buttonTint="@color/checkbox_selector"
+                android:text="Reducir desperdicio de alimentos"
+                android:textColor="@color/text_color"
+                android:textStyle="bold" />
+
+            <CheckBox
+                android:id="@+id/chkApoyarNegociosLocales"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/checkbox_selector"
+                android:text="Apoyar negocios locales"
+                android:textColor="@color/text_color"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Botón de guardar -->
+    <Button
+        android:id="@+id/btnGuardar"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:text="Guardar preferencias"
+        android:backgroundTint="#14AE5C"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp" />
+</LinearLayout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background_color">#FFFFFFFF</color>
+    <color name="item_color">#FFFFFFFF</color>
+    <color name="card_color">#FFFFFFFF</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="red">#FF5252</color>
+    <color name="blue">#2196F3</color>
+    <color name="warning_color">#FFA500</color>
+    <color name="hint_color">#010F07</color>
+    <color name="text_color">#010F07</color>
+    <color name="green">#14AE5C</color>
+    <color name="gray_chip_background">#E0E0E0</color>
+    <color name="green_chip_selected">#14AE5C</color>
+    <color name="green_light">#388E3C</color>
+    <color name="medium_gray">#54595E</color> <!-- Gris intermedio -->
+    <color name="navbar">#FFFFFFFF</color>
+    <!-- Para el edit text -->
+    <color name="edit_text_background">#FFFFFFFF</color> <!-- Gris claro para tema claro -->
+    <color name="edit_text_border">#D1D1D1</color> <!-- Gris más oscuro para el borde en tema claro -->
+    <color name="circle_fill_color">#4D004422</color> <!-- Green fill color -->
+    <color name="circle_stroke_color">#010F07</color> <!-- Dark green stroke color -->
+
+
+    <color name="divider_color">#DDDDDD</color> <!-- Gris claro para los separadores -->
+    <!-- Colores BottomSheet -->
+    <color name="chip_selected">#14AE5C</color> <!-- Verde seleccionado -->
+    <color name="chip_unselected">#767676</color> <!-- Gris para chips no seleccionados -->
+    <color name="chip_text_color">#010F07</color> <!-- Color del texto dentro del chip -->
+    <color name="apply_button">#14AE5C</color> <!-- Morado para el botón Aplicar -->
+    <color name="reset_button">#FF5252</color> <!-- Rojo para el botón de Rest All -->
+    <color name="background_bottom_sheet">#F8F9FA</color> <!-- Fondo del BottomSheet -->
+
+    <color name="cardBackgroundColor">@color/background_color</color> <!-- Color de fondo de la tarjeta -->
+
+    <color name="green_transparent">#4D14AE5C</color> <!-- Verde transparente -->
+
+    <!-- Colores para los estados de las notificaciones -->
+    <color name="light_success_bg">#E8F5E9</color>
+    <color name="light_warning_bg">#FFF8E1</color>
+    <color name="light_error_bg">#FFEBEE</color>
+</resources>

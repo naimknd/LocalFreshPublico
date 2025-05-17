@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Toolbar -->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:navigationIcon="@drawable/ic_back"
+        app:navigationIconTint="@color/white"
+        app:title="Detalle del producto"
+        app:titleTextAppearance="@style/TitleTextStyle"
+        app:titleTextColor="@color/white"
+        app:titleCentered="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintBottom_toTopOf="@id/bottomLayout">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <!-- Imagen del producto -->
+            <ImageView
+                android:id="@+id/imgProducto"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="fitCenter"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:src="@drawable/ic_placeholder"/>
+
+            <!-- Botón de favorito -->
+            <ImageButton
+                android:id="@+id/btnFavorito"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:background="@drawable/circle_background"
+                android:src="@drawable/ic_favorite"
+                android:padding="8dp"
+                app:layout_constraintTop_toTopOf="@id/imgProducto"
+                app:layout_constraintEnd_toEndOf="@id/imgProducto"
+                android:layout_margin="8dp" />
+
+            <!-- Nombre del producto -->
+            <TextView
+                android:id="@+id/txtNombreProducto"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_color"
+                app:layout_constraintTop_toBottomOf="@id/imgProducto"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:text="Nombre del Producto" />
+
+            <!-- Categoría -->
+            <TextView
+                android:id="@+id/txtCategoria"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/rounded_background"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="2dp"
+                android:textSize="14sp"
+                app:layout_constraintTop_toBottomOf="@id/txtNombreProducto"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:text="Categoría" />
+
+            <!-- Nombre de la tienda -->
+            <TextView
+                android:id="@+id/txtNombreTienda"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textSize="16sp"
+                android:textColor="@color/text_color"
+                app:layout_constraintTop_toBottomOf="@id/txtCategoria"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:text="Tienda: Supermercado XYZ" />
+
+            <!-- Sección de precios -->
+            <TextView
+                android:id="@+id/txtPrecioOriginal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:textSize="16sp"
+                android:textColor="@color/text_color"
+                app:layout_constraintTop_toBottomOf="@id/txtNombreTienda"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:text="$100.00" />
+
+            <TextView
+                android:id="@+id/txtPrecioDescuento"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:textColor="@color/green"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="@id/txtPrecioOriginal"
+                app:layout_constraintBottom_toBottomOf="@id/txtPrecioOriginal"
+                app:layout_constraintStart_toEndOf="@id/txtPrecioOriginal"
+                tools:text="$80.00" />
+
+            <!-- Cantidad disponible -->
+            <TextView
+                android:id="@+id/txtCantidad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:textColor="@color/text_color"
+                app:layout_constraintTop_toBottomOf="@id/txtPrecioOriginal"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:text="Cantidad disponible: 10" />
+
+            <!-- Detalles de expiración -->
+            <TextView
+                android:id="@+id/txtFechaExpiracion"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:textColor="@color/text_color"
+                app:layout_constraintTop_toBottomOf="@id/txtCantidad"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:text="Fecha: 15/12/2023" />
+
+            <TextView
+                android:id="@+id/txtTiempoRestante"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:drawablePadding="4dp"
+                app:layout_constraintTop_toBottomOf="@id/txtFechaExpiracion"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:text="Expira en 5 días"
+                android:textColor="@color/text_color"/>
+
+            <TextView
+                android:id="@+id/txtInfoConsumoPreferente"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Toca para más información sobre consumo preferente"
+                android:textSize="12sp"
+                android:textColor="@color/warning_color"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@id/txtTiempoRestante"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <ProgressBar
+                android:id="@+id/progressTiempoRestante"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                app:layout_constraintTop_toBottomOf="@id/txtInfoConsumoPreferente"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <!-- Descripción del producto -->
+            <TextView
+                android:id="@+id/lblDescripcion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Descripción"
+                android:textStyle="bold"
+                android:textColor="@color/text_color"
+                app:layout_constraintTop_toBottomOf="@id/progressTiempoRestante"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/txtDescripcion"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                app:layout_constraintTop_toBottomOf="@id/lblDescripcion"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:text="Esta es la descripción detallada del producto. Incluye información relevante sobre sus características y condiciones."
+                android:textColor="@color/text_color"/>
+
+            <!-- Botón cómo llegar -->
+            <Button
+                android:id="@+id/btnComoLlegar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Cómo llegar a la tienda"
+                android:drawableStart="@drawable/ic_marker"
+                android:padding="12dp"
+               style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                app:layout_constraintTop_toBottomOf="@id/txtDescripcion"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <!-- Layout inferior con controles de cantidad y botón de agregar al carrito -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottomLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:elevation="8dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <!-- Controles de cantidad -->
+        <LinearLayout
+            android:id="@+id/quantityControls"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/rounded_edittext"
+            android:padding="4dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <ImageButton
+                android:id="@+id/btnDecrease"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_remove"
+                android:contentDescription="Disminuir cantidad"
+                app:tint="@color/red" />
+
+            <TextView
+                android:id="@+id/txtQuantityValue"
+                android:layout_width="36dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textSize="16sp"
+                android:textColor="@color/text_color"
+                android:textStyle="bold"
+                tools:text="1" />
+
+            <ImageButton
+                android:id="@+id/btnIncrease"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_add"
+                android:contentDescription="Aumentar cantidad"
+                app:tint="@color/green" />
+        </LinearLayout>
+
+        <!-- Botón agregar al carrito -->
+        <Button
+            android:id="@+id/btnAgregarCarrito"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Agregar al carrito"
+            android:drawableStart="@drawable/ic_cart"
+            android:padding="12dp"
+            android:textColor="@color/white"
+            style="@style/Widget.MaterialComponents.Button"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/quantityControls"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
